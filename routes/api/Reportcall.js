@@ -1,15 +1,15 @@
 const Router = require("express").Router;
 const ReportcallService = require("../../services/Reportcall.service")();
-const Reportcall = require("../../models/Reportcall");
+const Reportcalls = require("../../models/Reportcall");
 
 const router = Router({
     mergeParams: true,
   });
 
-  router.get("/DisplayReportcall", async(req, res) => {
+  router.get("/DisplayReportcalls", async(req, res) => {
     try {
-      const Reportcall = await ReportcallService.DisplayReportcall();
-      res.send(Reportcall);
+      const Reportcalls = await ReportcallService.DisplayReportcalls();
+      res.send(Reportcalls);
     } catch(err) {
       res.json({ success: false, msg: "Failed to display the report call"});
     }
@@ -30,9 +30,9 @@ router.delete("/deleteReportcall/:id", async(req, res) => {
     try {
       const id = req.params.id;
       ReportcallService.deleteReportcall(id);
-      res.send({ success: true, msg: "Report is deleted"})
+      res.send({ success: true, msg: "Report call is deleted"})
     } catch (error) {
-      res.send({ success: false, msg: "Report is not added!"})
+      res.send({ success: false, msg: "Report call is not added!"})
     }
   });
 

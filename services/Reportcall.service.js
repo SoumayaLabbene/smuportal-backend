@@ -1,7 +1,7 @@
 const Reportcall = require("../models/Reportcall")
 
 function ReportcallService() {
-    async function DisplayReportcall() {
+    async function DisplayReportcalls() {
       return Reportcall.find({})
     }
   
@@ -14,7 +14,7 @@ function ReportcallService() {
     }
   
     return {
-      DisplayReportcall,
+      DisplayReportcalls,
       addReportcall,
       deleteReportcall
     }
