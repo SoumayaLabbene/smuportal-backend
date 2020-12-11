@@ -14,18 +14,19 @@ const ReportcallSchema = new mongoose.Schema({
     lowercase: true,
     min: 2,
     max: 1000
-  },
-  Id: {
-    type: Number,
-    unique: true,
-    required: true,
-    min: 1,
-    max: 9999,
-    validate: {
-      validator: Number.isInteger,
-      message: "{VALUE} is not an integer value"
-    }
   }
+  // },
+  // Id: {
+  //   type: Number,
+  //   unique: true,
+  //   required: true,
+  //   min: 1,
+  //   max: 9999,
+  //   validate: {
+  //     validator: Number.isInteger,
+  //     message: "{VALUE} is not an integer value"
+  //   }
+  // }
   /*Image: {
     type: image,
     required: true,
