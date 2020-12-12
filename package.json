@@ -30,5 +30,8 @@
     "qrcode": "^1.4.4",
     "simple-oauth2": "^3.3.0",
     "speakeasy": "^2.0.0"
+  },
+  "devDependencies": {
+    "@types/mongoose": "^5.10.2"
   }
 }
