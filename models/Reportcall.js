@@ -14,6 +14,10 @@ const ReportcallSchema = new mongoose.Schema({
     lowercase: true,
     min: 2,
     max: 1000
+  },
+  Type:{
+    type: String,
+    required: true
   }
   // },
   // Id: {
