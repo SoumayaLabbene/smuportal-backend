@@ -18,24 +18,11 @@ const ReportcallSchema = new mongoose.Schema({
   Type:{
     type: String,
     required: true
-  }
-  // },
-  // Id: {
-  //   type: Number,
-  //   unique: true,
-  //   required: true,
-  //   min: 1,
-  //   max: 9999,
-  //   validate: {
-  //     validator: Number.isInteger,
-  //     message: "{VALUE} is not an integer value"
-  //   }
-  // }
-  /*Image: {
-    type: image,
-    required: true,
-  },*/
-
+  },
+  Image: {
+    type: String,
+    require: true,
+  },
 });
 
 module.exports = mongoose.model("Reportcall", ReportcallSchema);
