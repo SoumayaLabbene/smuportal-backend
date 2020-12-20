@@ -23,6 +23,10 @@ const ReportcallSchema = new mongoose.Schema({
     type: String,
     require: true,
   },
+  Contact: {
+    type: String,
+    required: true,
+  }
 });
 
 module.exports = mongoose.model("Reportcall", ReportcallSchema);

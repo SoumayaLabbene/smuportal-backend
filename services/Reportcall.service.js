@@ -5,8 +5,8 @@ function ReportcallService() {
       return Reportcall.find({})
     }
   
-    async function addReportcall(title, details, reportImage, type) {
-      return Reportcall.create({Title: title, Details: details,  Image: reportImage, Type: type})
+    async function addReportcall(title, details, reportImage, type, contact) {
+      return Reportcall.create({Title: title, Details: details,  Image: reportImage, Type: type, Contact: contact})
     }
   
     async function deleteReportcall(title) {

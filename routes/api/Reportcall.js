@@ -18,8 +18,8 @@ const router = Router({
 router.post("/addReportcall", async(req, res, next) => {
     try {
         console.log(req.body);
-        const {title, details, reportImage, type} = req.body;
-        await ReportcallService.addReportcall(title, details, reportImage, type);
+        const {title, details, reportImage, type, contact} = req.body;
+        await ReportcallService.addReportcall(title, details, reportImage, type, contact);
         res.send({ success: true, msg: "Report call Added"});
     } catch (err) {
         res.send({ success: false, msg: "Report call not Added!", err})
